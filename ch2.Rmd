@@ -84,6 +84,9 @@ with(m111survey,perctable(sex))  #Sadly, perctable does not allow formula input
 
 >**Practice**:  Investigate numerically the Research Question:  "What percentage of students prefer to sit in the front of a classroom?"  Use **xtabs** and **perctable**.
 
+
+
+
 #### Graphical Exploration:  Barcharts.
 
 First, store the table in a well-named place:
@@ -243,7 +246,12 @@ Using the stemplot you can recover the original speeds, to the nearest whole num
 >
 >1. How many people drove between 60 and 70 miles per hour (include 60)?  What were their speeds?
 >2. How many people drove between 120 and 140 mph (include 120)?
->3. How many drove between between 120 and 130 mph (include 120)?
+>3. How many drove between between 120 and 130 mph (include 120)?  
+
+```{r}
+m111survey
+```
+
 
 ##### **Histograms**
 
@@ -293,9 +301,13 @@ histogram(~fastest,data=m111survey,
 
 >**Practice:**  Look at the last histogram to answer these questions:
 >
->1. About what percentage of students in the sample drove between 90 and 100 mph (include 90)?
->2. About what percentage drove between 100 and 110 mph?
->3. About what percentage drove between 100 and 120 mph?
+>1. About what percentage of students in the sample drove between 90 and 100 mph (include 90)?  
+    ~24%
+>2. About what percentage drove between 100 and 110 mph?  
+    20%
+>3. About what percentage drove between 100 and 120 mph?  
+    ~14%
+
 
 So far, the vertical axis in histograms gives percentages.  If we want frequencies, we say:
 ```{r fig.width=3,fig.height=3}
