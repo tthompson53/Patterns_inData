@@ -165,6 +165,16 @@ barchart(tabsexseat,stack=FALSE,horizontal=FALSE,
 
 >**Practice:**  Research Question:  "Who is more likely to believe in love at first sight:  a guy or a gal?"  Explore this question both graphically and numerically.
 
+```{r}
+contTable <- xtabs(~ sex + love_first, data = m111survey)
+barchart(contTable,
+	auto.key = list(
+		space = "top",
+		title = "love_first",
+		cex.title = 1,
+		columns = 1))
+```
+
 
 
 ### Research Question:  How fast do GC students drive, when they drive their fastest?
