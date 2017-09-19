@@ -127,11 +127,15 @@ barchart(ptabseat,horizontal=FALSE,
 ###  Research Question:  Who is more likely to sit in the front:  a guy or a gal?
 
 ```{r}
-ptabseat<- with(m111survey,tally(seat))
-barchart(ptabseat,horizontal=FALSE,
-         main="More Likely to sit in the front: Guys vs. Gals\n(Percentages)",
-         ylab="Percent")
+contTable <- xtabs(~ sex + seat, data = m111survey)
+barchart(contTable,
+	auto.key = list(
+		space = "top",
+		title = "seat",
+		cex.title = 1,
+		columns = 1))
 ```
+
 
 This Research Question is about the relationship between **two categorical variables**, namely **sex** and **seat**.  We wonder whether knowing a person's sex might help us predict where the person prefers to sit, so we think of **sex** as the *explanatory* variable and **seat** as the *response* variable.
 
